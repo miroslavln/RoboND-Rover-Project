@@ -1,4 +1,4 @@
-##Notebook analysis
+## Notebook analysis
 
 The notebook provides a pre-recoded video of the rover exploring the environment with the intended purpose to apply
 on it the main steps of the project.
@@ -26,7 +26,7 @@ the position of the rover. They are also scaled since the map represents much la
 * Next the world map is updated with the pixels from the previous step.
 
 
-##Autonomous Navigation and Mapping
+## Autonomous Navigation and Mapping
 
 A simulator from udacity is provided to test the navigation and mapping of an autonomous rover. The perception steps is 
 done in the perception_step() method and follows what was described in the notebook section with the addition that rocks 
