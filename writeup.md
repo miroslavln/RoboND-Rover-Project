@@ -25,6 +25,7 @@ the position of the rover. They are also scaled since the map represents much la
 
 * Next the world map is updated with the pixels from the previous step.
 
+[Video results](./output/test_mapping.mp4)
 
 ## Autonomous Navigation and Mapping
 
