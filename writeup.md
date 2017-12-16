@@ -46,12 +46,10 @@ During navigation a simple decision tree approach is used to send commands to th
 The current state is saved in Rover.mode and is updated on each step based on the perception data received in the 
 Rover.nav_angles.
 
-If the current mode is "forward" we make sure that we have enough space to move forward by counting the number of nav_angles 
-values and if we do then we calculate the steering angle based on the mean of the nav_angles values. 
-If there aren't enough nav_angle values we switch to "stop" mode and set the throttle to zero and increase the breaks value.
+If the current mode is "forward" we make sure that we have enough space to move forward and if we do then we calculate the steering angle based on the mean of the nav_angles values. If there isn't enough space we switch to "stop" mode and set the throttle to zero and increase the breaks value.
 
-If we are "stop" mode then we check the perception data information to see if we have enough space. If not then we start 
-turning the rover. If there is enough space then we increase the throttle and switch to "forward" mode. 
+If we are in "stop" mode then we check the perception data information to see if we have enough space. If not then we start 
+turning the rover by setting the steering angle to -15. If there is enough space then we increase the throttle calculate the new turning angle and switch to "forward" mode. 
 
 The way we check if there is enough space is by counting the number of nav_angles and thresholding them using the 
 Rover.stop_forward value.
